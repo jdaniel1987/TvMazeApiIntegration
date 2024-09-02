@@ -4,7 +4,7 @@ using TvMazeApiIntegration.Domain.Entities;
 
 namespace TvMazeApiIntegration.Application.Extensions;
 
-public class ShowExtensionsTests
+public sealed class ShowExtensionsTests
 {
     private readonly IFixture _fixture;
 

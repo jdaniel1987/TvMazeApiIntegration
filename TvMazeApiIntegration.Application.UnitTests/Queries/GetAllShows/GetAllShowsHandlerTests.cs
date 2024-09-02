@@ -5,7 +5,7 @@ using TvMazeApiIntegration.Domain.Interfaces;
 
 namespace TvMazeApiIntegration.Application.UnitTests.Queries.GetAllShows;
 
-public class GetAllShowsHandlerTests
+public sealed class GetAllShowsHandlerTests
 {
     [Theory, AutoData]
     public async Task Handle_ShouldReturnFailureResult_WhenExceptionIsThrown(

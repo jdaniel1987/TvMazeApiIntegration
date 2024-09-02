@@ -1,4 +1,3 @@
-using AutoFixture;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using System.Net.Http.Json;
@@ -7,16 +6,14 @@ using TvMazeApiIntegration.Domain.Entities;
 
 namespace TvMazeApiIntegration.API.Commands.IntegrationTests.Commands;
 
-public class FetchAndStoreShowsTests : ApiBaseTests
+public sealed class FetchAndStoreShowsTests : ApiBaseTests
 {
     [Theory, AutoData]
     public async Task Should_fetch_and_store_shows(
-        IFixture fixture)
+        FetchAndStoreShowsCommand command)
     {
         // Arrange
-        var command = fixture.Build<FetchAndStoreShowsCommand>()
-            .With(c => c.ApiKey, "YourSecretApiKey")
-            .Create();
+        var apiKey = "YourSecretApiKey";
 
         var expected = new[]
         {
@@ -25,6 +22,7 @@ public class FetchAndStoreShowsTests : ApiBaseTests
         };
 
         // Act
+        ApiClient.DefaultRequestHeaders.Add("ApiKey", apiKey);
         var response = await ApiClient.PostAsJsonAsync("api/FetchAndStoreShows", command);
 
         // Assert

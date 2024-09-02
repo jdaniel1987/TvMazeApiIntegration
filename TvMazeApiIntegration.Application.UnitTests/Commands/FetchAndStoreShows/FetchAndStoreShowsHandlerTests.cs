@@ -5,7 +5,7 @@ using TvMazeApiIntegration.Infrastructure.APIs;
 
 namespace TvMazeApiIntegration.Application.UnitTests.Commands.FetchAndStoreShows;
 
-public class FetchAndStoreShowsHandlerTests
+public sealed class FetchAndStoreShowsHandlerTests
 {
     [Theory, AutoData]
     public async Task Handle_ShouldReturnFailureResult_WhenApiCallFails(

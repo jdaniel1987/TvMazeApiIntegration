@@ -5,7 +5,7 @@ using TvMazeApiIntegration.Domain.Entities;
 
 namespace TvMazeApiIntegration.API.Queries.IntegrationTests.Modules;
 
-public class GetAllShowsTests : ApiBaseTests
+public sealed class GetAllShowsTests : ApiBaseTests
 {
     [Theory, AutoData]
     public async Task Should_get_all_shows(
