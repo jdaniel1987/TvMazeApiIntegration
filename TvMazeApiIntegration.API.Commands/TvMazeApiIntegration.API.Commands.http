@@ -1,0 +1,10 @@
+@TvMazeApiIntegrationAPICommands_HostAddress = http://localhost:5186
+
+POST {{TvMazeApiIntegrationAPICommands_HostAddress}}/FetchAndStoreShows/
+Accept: application/json
+Content-Type: application/json
+{
+  
+}
+
+###

@@ -1,0 +1,6 @@
+@TvMazeApiIntegrationAPIQueries_HostAddress = http://localhost:5240
+
+GET {{TvMazeApiIntegrationAPIQueries_HostAddress}}/Shows/
+Accept: application/json
+
+###

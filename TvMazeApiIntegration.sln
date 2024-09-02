@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.Application", "TvMazeApiIntegration.Application\TvMazeApiIntegration.Application.csproj", "{3426C3E9-8939-44FC-BEC8-5E0292298445}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.Domain", "TvMazeApiIntegration.Domain\TvMazeApiIntegration.Domain.csproj", "{ABC1E17F-5532-4716-B40B-ABF12A65A441}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.Infrastructure", "TvMazeApiIntegration.Infrastructure\TvMazeApiIntegration.Infrastructure.csproj", "{6624A76B-FE64-4706-B909-FA2328C69E3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.API.Commands", "TvMazeApiIntegration.API.Commands\TvMazeApiIntegration.API.Commands.csproj", "{82A8DD6C-0594-44A7-A6A5-C6EB311294FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.API.Queries", "TvMazeApiIntegration.API.Queries\TvMazeApiIntegration.API.Queries.csproj", "{0A4A14C2-7C3E-4124-86A2-891205B3C74A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5F127F7D-EDB1-464A-B7D1-AFC21124B779}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{501FD472-BCB3-4658-B14E-59AD4E4B326E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.Infrastructure.UnitTests", "TvMazeApiIntegration.Infrastructure.UnitTests\TvMazeApiIntegration.Infrastructure.UnitTests.csproj", "{EF9DA6EE-FC6A-4840-B4B3-3947FCA47C05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.Application.UnitTests", "TvMazeApiIntegration.Application.UnitTests\TvMazeApiIntegration.Application.UnitTests.csproj", "{4482BCE6-9B3D-4380-B6EF-F6E6216B072A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.API.Queries.IntegrationTests", "TvMazeApiIntegration.API.Queries.IntegrationTests\TvMazeApiIntegration.API.Queries.IntegrationTests.csproj", "{86D8814D-F485-4106-AF91-8A0230B68DBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvMazeApiIntegration.API.Commands.IntegrationTests", "TvMazeApiIntegration.API.Commands.IntegrationTests\TvMazeApiIntegration.API.Commands.IntegrationTests.csproj", "{BF8B2936-0469-4DDF-A3AC-1D50610B0322}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6FE29E9-0829-42AC-B4DE-3ECAF90A7BBD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3426C3E9-8939-44FC-BEC8-5E0292298445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3426C3E9-8939-44FC-BEC8-5E0292298445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3426C3E9-8939-44FC-BEC8-5E0292298445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3426C3E9-8939-44FC-BEC8-5E0292298445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC1E17F-5532-4716-B40B-ABF12A65A441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC1E17F-5532-4716-B40B-ABF12A65A441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC1E17F-5532-4716-B40B-ABF12A65A441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC1E17F-5532-4716-B40B-ABF12A65A441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6624A76B-FE64-4706-B909-FA2328C69E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6624A76B-FE64-4706-B909-FA2328C69E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6624A76B-FE64-4706-B909-FA2328C69E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6624A76B-FE64-4706-B909-FA2328C69E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82A8DD6C-0594-44A7-A6A5-C6EB311294FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A8DD6C-0594-44A7-A6A5-C6EB311294FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A8DD6C-0594-44A7-A6A5-C6EB311294FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A8DD6C-0594-44A7-A6A5-C6EB311294FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4A14C2-7C3E-4124-86A2-891205B3C74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4A14C2-7C3E-4124-86A2-891205B3C74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4A14C2-7C3E-4124-86A2-891205B3C74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4A14C2-7C3E-4124-86A2-891205B3C74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF9DA6EE-FC6A-4840-B4B3-3947FCA47C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9DA6EE-FC6A-4840-B4B3-3947FCA47C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9DA6EE-FC6A-4840-B4B3-3947FCA47C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9DA6EE-FC6A-4840-B4B3-3947FCA47C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4482BCE6-9B3D-4380-B6EF-F6E6216B072A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4482BCE6-9B3D-4380-B6EF-F6E6216B072A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4482BCE6-9B3D-4380-B6EF-F6E6216B072A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4482BCE6-9B3D-4380-B6EF-F6E6216B072A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D8814D-F485-4106-AF91-8A0230B68DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D8814D-F485-4106-AF91-8A0230B68DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D8814D-F485-4106-AF91-8A0230B68DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D8814D-F485-4106-AF91-8A0230B68DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8B2936-0469-4DDF-A3AC-1D50610B0322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8B2936-0469-4DDF-A3AC-1D50610B0322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8B2936-0469-4DDF-A3AC-1D50610B0322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8B2936-0469-4DDF-A3AC-1D50610B0322}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3426C3E9-8939-44FC-BEC8-5E0292298445} = {5F127F7D-EDB1-464A-B7D1-AFC21124B779}
+		{ABC1E17F-5532-4716-B40B-ABF12A65A441} = {5F127F7D-EDB1-464A-B7D1-AFC21124B779}
+		{6624A76B-FE64-4706-B909-FA2328C69E3D} = {5F127F7D-EDB1-464A-B7D1-AFC21124B779}
+		{82A8DD6C-0594-44A7-A6A5-C6EB311294FF} = {5F127F7D-EDB1-464A-B7D1-AFC21124B779}
+		{0A4A14C2-7C3E-4124-86A2-891205B3C74A} = {5F127F7D-EDB1-464A-B7D1-AFC21124B779}
+		{EF9DA6EE-FC6A-4840-B4B3-3947FCA47C05} = {501FD472-BCB3-4658-B14E-59AD4E4B326E}
+		{4482BCE6-9B3D-4380-B6EF-F6E6216B072A} = {501FD472-BCB3-4658-B14E-59AD4E4B326E}
+		{86D8814D-F485-4106-AF91-8A0230B68DBF} = {501FD472-BCB3-4658-B14E-59AD4E4B326E}
+		{BF8B2936-0469-4DDF-A3AC-1D50610B0322} = {501FD472-BCB3-4658-B14E-59AD4E4B326E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {351036B5-EBE6-45D6-B92B-10744281043C}
+	EndGlobalSection
+EndGlobal
