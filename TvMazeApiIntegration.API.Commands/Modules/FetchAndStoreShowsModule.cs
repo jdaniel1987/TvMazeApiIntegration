@@ -12,7 +12,6 @@ public class FetchAndStoreShowsModule : ICarterModule
     {
         app.MapPost("api/FetchAndStoreShows", async (
             [FromHeader(Name = "ApiKey")] string apiKey,
-            FetchAndStoreShowsCommand command, 
             IMediator mediator, 
             IConfiguration configuration, 
             CancellationToken cancellationToken) =>
@@ -22,6 +21,7 @@ public class FetchAndStoreShowsModule : ICarterModule
                 return Results.Unauthorized();
             }
 
+            var command = new FetchAndStoreShowsCommand();
             var result = await mediator.Send(command, cancellationToken);
 
             return result.IsSuccess ?

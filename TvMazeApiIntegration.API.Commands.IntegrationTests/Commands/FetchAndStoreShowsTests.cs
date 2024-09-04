@@ -1,16 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using System.Net;
-using System.Net.Http.Json;
-using TvMazeApiIntegration.Application.Commands.FetchAndStoreShows;
 using TvMazeApiIntegration.Domain.Entities;
 
 namespace TvMazeApiIntegration.API.Commands.IntegrationTests.Commands;
 
 public sealed class FetchAndStoreShowsTests : ApiBaseTests
 {
-    [Theory, AutoData]
-    public async Task Should_fetch_and_store_shows(
-        FetchAndStoreShowsCommand command)
+    [Fact]
+    public async Task Should_fetch_and_store_shows()
     {
         // Arrange
         var apiKey = "YourSecretApiKey";
@@ -23,7 +20,7 @@ public sealed class FetchAndStoreShowsTests : ApiBaseTests
 
         // Act
         ApiClient.DefaultRequestHeaders.Add("ApiKey", apiKey);
-        var response = await ApiClient.PostAsJsonAsync("api/FetchAndStoreShows", command);
+        var response = await ApiClient.PostAsync("api/FetchAndStoreShows", null);
 
         // Assert
         var actualReadOnlyDb = await ReadOnlyDbContext.Shows.ToArrayAsync();
