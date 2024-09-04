@@ -1,4 +1,6 @@
 ﻿using Carter;
+using Refit;
+using TvMazeApiIntegration.API.Queries.Contracts;
 using TvMazeApiIntegration.Application;
 using TvMazeApiIntegration.Infrastructure;
 
@@ -10,6 +12,8 @@ public static class ServiceCollectionExtensions
     {
         services.AddInfrastructure(configuration);
         services.AddApplication();
+        services.AddRefitClient<IQueryEndpoints>()
+                .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://your-api-url.com"));
 
         services.AddControllers();
         services.AddEndpointsApiExplorer();

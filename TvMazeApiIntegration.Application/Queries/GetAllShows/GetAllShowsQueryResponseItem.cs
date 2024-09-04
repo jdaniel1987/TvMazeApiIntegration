@@ -1,4 +1,4 @@
 ﻿namespace TvMazeApiIntegration.Application.Queries.GetAllShows;
 
-public record GetAllShowsResponseItem(
+public record GetAllShowsQueryResponseItem(
     string Show);

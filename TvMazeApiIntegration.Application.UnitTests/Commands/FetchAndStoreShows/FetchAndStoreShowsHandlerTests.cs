@@ -92,6 +92,6 @@ public sealed class FetchAndStoreShowsHandlerTests
 
         // Assert
         result.IsSuccess.Should().BeTrue();
-        result.Value.Should().BeOfType<FetchAndStoreShowsResponse>();
+        result.Value.Should().BeOfType<FetchAndStoreShowsCommandResponse>();
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections.Immutable;
+﻿using TvMazeApiIntegration.API.Queries.Contracts.Responses;
 using TvMazeApiIntegration.Application.Queries.GetAllShows;
 using TvMazeApiIntegration.Domain.Entities;
 
@@ -6,25 +6,35 @@ namespace TvMazeApiIntegration.Application.Extensions;
 
 public sealed class ShowExtensionsTests
 {
-    private readonly IFixture _fixture;
-
-    public ShowExtensionsTests()
+    public sealed class ToGetAllShowsQueryResponse
     {
-        _fixture = new Fixture();
+        [Theory, AutoData]
+        public void ToGetAllShowsQueryResponse_ShouldConvertShowsToQueryResponse(IReadOnlyCollection<Show> shows)
+        {
+            // Arrange
+            var expected = shows.Select(s => new GetAllShowsResponseItem(s.Data));
+
+            // Act
+            var result = shows.ToGetAllShowsQueryResponse();
+
+            // Assert
+            result.Shows.Should().BeEquivalentTo(expected);
+        }
     }
 
-    [Fact]
-    public void ToGetAllShowsResponse_ShouldConvertShowsToResponse()
+    public sealed class ToGetAllShowsResponse
     {
-        // Arrange
-        var shows = _fixture.CreateMany<Show>(3).ToImmutableArray();
+        [Theory, AutoData]
+        public void ToGetAllShowsResponse_ShouldConvertGetAllShowsQueryResponseToResponse(GetAllShowsQueryResponse showsQueryResponse)
+        {
+            // Arrange
+            var expected = showsQueryResponse.Shows.Select(s => new GetAllShowsResponseItem(s.Show));
 
-        var expected = shows.Select(s => new GetAllShowsResponseItem(s.Data));
+            // Act
+            var result = showsQueryResponse.ToGetAllShowsResponse();
 
-        // Act
-        var result = shows.ToGetAllShowsResponse();
-
-        // Assert
-        result.Shows.Should().BeEquivalentTo(expected);
+            // Assert
+            result.Shows.Should().BeEquivalentTo(expected);
+        }
     }
 }

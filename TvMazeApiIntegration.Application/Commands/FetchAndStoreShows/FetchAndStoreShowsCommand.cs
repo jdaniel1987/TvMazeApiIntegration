@@ -3,4 +3,4 @@ using MediatR;
 
 namespace TvMazeApiIntegration.Application.Commands.FetchAndStoreShows;
 
-public record FetchAndStoreShowsCommand() : IRequest<IResult<FetchAndStoreShowsResponse>>;
+public record FetchAndStoreShowsCommand() : IRequest<IResult<FetchAndStoreShowsCommandResponse>>;

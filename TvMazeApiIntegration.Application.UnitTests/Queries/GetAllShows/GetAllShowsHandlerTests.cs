@@ -43,6 +43,6 @@ public sealed class GetAllShowsHandlerTests
 
         // Assert
         result.IsSuccess.Should().BeTrue();
-        result.Value.Shows.Should().BeEquivalentTo(shows.ToGetAllShowsResponse().Shows);
+        result.Value.Shows.Should().BeEquivalentTo(shows.ToGetAllShowsQueryResponse().Shows);
     }
 }

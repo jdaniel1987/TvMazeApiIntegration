@@ -1,3 +1,3 @@
 ﻿namespace TvMazeApiIntegration.Application.Commands.FetchAndStoreShows;
 
-public record FetchAndStoreShowsResponse();
+public record FetchAndStoreShowsCommandResponse();

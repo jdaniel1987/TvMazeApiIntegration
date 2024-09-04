@@ -1,6 +1,6 @@
 ﻿using System.Collections.Immutable;
 using System.Net.Http.Json;
-using TvMazeApiIntegration.Application.Queries.GetAllShows;
+using TvMazeApiIntegration.API.Queries.Contracts.Responses;
 using TvMazeApiIntegration.Domain.Entities;
 
 namespace TvMazeApiIntegration.API.Queries.IntegrationTests.Modules;

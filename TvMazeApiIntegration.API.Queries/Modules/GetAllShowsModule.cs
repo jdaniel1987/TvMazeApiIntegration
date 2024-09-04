@@ -1,5 +1,6 @@
 ﻿using Carter;
 using MediatR;
+using TvMazeApiIntegration.Application.Extensions;
 using TvMazeApiIntegration.Application.Queries.GetAllShows;
 using TvMazeApiIntegration.Domain.Entities;
 
@@ -16,7 +17,7 @@ public class GetAllShowsShowsModule : ICarterModule
             var result = await mediator.Send(query, cancellationToken);
 
             return result.IsSuccess ?
-                Results.Ok(result.Value) :
+                Results.Ok(result.Value.ToGetAllShowsResponse()) :
                 Results.StatusCode(500);
         })
         .WithOpenApi(operation =>

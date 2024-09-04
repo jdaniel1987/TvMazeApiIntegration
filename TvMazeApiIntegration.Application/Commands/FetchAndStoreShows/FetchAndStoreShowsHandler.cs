@@ -10,12 +10,12 @@ namespace TvMazeApiIntegration.Application.Commands.FetchAndStoreShows;
 
 public class FetchAndStoreShowsHandler(
     ITVMazeApi tvMazeApi,
-    IShowRepository showRepository) : IRequestHandler<FetchAndStoreShowsCommand, IResult<FetchAndStoreShowsResponse>>
+    IShowRepository showRepository) : IRequestHandler<FetchAndStoreShowsCommand, IResult<FetchAndStoreShowsCommandResponse>>
 {
     private readonly ITVMazeApi _tvMazeApi = tvMazeApi;
     private readonly IShowRepository _showRepository = showRepository;
 
-    public async Task<IResult<FetchAndStoreShowsResponse>> Handle(FetchAndStoreShowsCommand request, CancellationToken cancellationToken)
+    public async Task<IResult<FetchAndStoreShowsCommandResponse>> Handle(FetchAndStoreShowsCommand request, CancellationToken cancellationToken)
     {
         string showsRawString;
         IReadOnlyCollection<Show> shows;
@@ -26,7 +26,7 @@ public class FetchAndStoreShowsHandler(
         }
         catch (Exception ex)
         {
-            return Result.Failure<FetchAndStoreShowsResponse>($"Error connecting to TVMaze API: {ex.Message}");
+            return Result.Failure<FetchAndStoreShowsCommandResponse>($"Error connecting to TVMaze API: {ex.Message}");
         }
 
         try
@@ -41,7 +41,7 @@ public class FetchAndStoreShowsHandler(
         }
         catch (Exception ex)
         {
-            return Result.Failure<FetchAndStoreShowsResponse>($"Error parsing TVMaze response: {ex.Message}");
+            return Result.Failure<FetchAndStoreShowsCommandResponse>($"Error parsing TVMaze response: {ex.Message}");
         }
 
         try
@@ -50,9 +50,9 @@ public class FetchAndStoreShowsHandler(
         }
         catch (Exception ex)
         {
-            return Result.Failure<FetchAndStoreShowsResponse>($"Error saving to DB: {ex.Message}");
+            return Result.Failure<FetchAndStoreShowsCommandResponse>($"Error saving to DB: {ex.Message}");
         }
 
-        return Result.Success(new FetchAndStoreShowsResponse());
+        return Result.Success(new FetchAndStoreShowsCommandResponse());
     }
 }

@@ -22,3 +22,6 @@ The project is built following the principles of **CQRS** (Command and Query Res
 - **CSharpFunctionalExtensions**: Adds the IResult object to abstract application layer handler responses from presentation layer responses.  
 - **MediatR.Extensions.FluentValidation.AspNetCore**: Enables automatic validation when commands and queries are sent to MediatR handlers.  
 - **Microsoft.EntityFrameworkCore**: ORM to facilitate database access.  
+- **Refit**: Provides a library for defining interfaces that map to API endpoints, making it easy to call and interact with these APIs in a strongly-typed manner in your application.  
+
+**NOTE: for testing purposes, "YourSecretApiKey" is the correct Api Key to call FetchAndStoreShows**

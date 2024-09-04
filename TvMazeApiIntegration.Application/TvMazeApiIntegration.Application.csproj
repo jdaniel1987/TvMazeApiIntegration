@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\TvMazeApiIntegration.API.Queries.Contracts\TvMazeApiIntegration.API.Queries.Contracts.csproj" />
     <ProjectReference Include="..\TvMazeApiIntegration.Infrastructure\TvMazeApiIntegration.Infrastructure.csproj" />
   </ItemGroup>
 
